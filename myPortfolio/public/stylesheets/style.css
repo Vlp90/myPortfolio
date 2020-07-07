@@ -1,8 +1,38 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+
 body {
-  padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background-color: #F3F4F9;
+  width: 100vw;
+  /* height: 100vh; */
 }
 
 a {
   color: #00B7FF;
+}
+
+.home {
+  max-width: 1140px;
+  margin: 50px auto;
+  
+}
+
+
+.info-container {
+  width: calc(30% - 40px);
+  margin: 20px;
+  background-color: white;
+  border-radius: 10px;
+}
+
+.content-container {
+  width: calc(70% - 40px);
+  margin: 20px;
+  height: calc(100vh - 140px);
+  background-color: white;
+  border-radius: 10px;
 }
