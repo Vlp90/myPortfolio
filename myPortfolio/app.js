@@ -1,3 +1,6 @@
+require("dotenv").config();
+require("./config/mongodb"); // database initial setup
+
 const express      = require('express');
 const path         = require('path');
 const favicon      = require('serve-favicon');
@@ -5,15 +8,40 @@ const logger       = require('morgan');
 const cookieParser = require('cookie-parser');
 const bodyParser   = require('body-parser');
 const mongoose     = require('mongoose');
-
-
-mongoose.connect('mongodb://localhost/myportfolio');
-
+const session = require("express-session");
+const MongoStore = require("connect-mongo")(session);
 const app = express();
+const hbs = require("hbs");
 
-// view engine setup
-app.set('views', path.join(__dirname, 'views'));
-app.set('view engine', 'hbs');
+// Server Started
+const listener = app.listen(process.env.PORT, () => {
+  console.log(`app started at ${process.env.SITE_URL}:${process.env.PORT}`);
+});
+
+// mongoose.connect('mongodb://localhost/myportfolio');
+
+
+// SESSION SETUP
+app.use(
+  session({
+    secret: process.env.SESSION_SECRET,
+    cookie: { maxAge: 600000 }, // in millisec
+    store: new MongoStore({
+      mongooseConnection: mongoose.connection,
+      ttl: 24 * 60 * 60, // 1 day
+    }),
+    saveUninitialized: true,
+    resave: true,
+  })
+);
+
+// initial config
+app.set("view engine", "hbs");
+app.set("views", __dirname + "/views");
+app.use(express.static("public"));
+hbs.registerPartials(__dirname + "/views/partial");
+app.use(express.urlencoded({ extended: false }));
+app.use(express.json());
 
 // default value for title local
 app.locals.title = 'My sublime Portfolio';
@@ -47,9 +75,7 @@ app.use((err, req, res, next) => {
   res.render('error');
 });
 
-// Server Started
-app.listen(3000, () => {
-  console.log('My first app listening on port 3000!')
-});
+
+
 
 module.exports = app;
