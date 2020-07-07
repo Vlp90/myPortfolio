@@ -39,7 +39,7 @@ app.use(
 app.set("view engine", "hbs");
 app.set("views", __dirname + "/views");
 app.use(express.static("public"));
-hbs.registerPartials(__dirname + "/views/partial");
+hbs.registerPartials(__dirname + "/views/partials");
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 

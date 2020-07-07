@@ -1,14 +1,28 @@
 <main class='container-fluid'>
 
     <div class='home row'>
+
+        {{!-- LEFT SIDE --}}
         <div class='info-container'>
+            <div class='margin-container'>
 
-            <div>
-                <h1>test</h1>
+                {{>infoContainer}}
             </div>
-
         </div>
-        <div class='content-container'>right</div>
+    </div>
+
+
+    {{!-- RIGHT SIDE --}}
+    <div class='content-container overflow-auto'>
+        <div class='margin-container'>
+            {{>workContainer}}
+            {{!-- {{>workId}} --}}
+        </div>
+
+    </div>
+
+  
+    </div>
     </div>
 
 
