@@ -16,54 +16,19 @@
 
 {{!--  CARDS--}}
 
-
 <div class='card-block'>
-
+    {{#each allWork}}
     <div class="card-container" style="width: 18rem;">
-        <img class="card-img-top img-card" src="/images/template.jpg" alt="Card image cap">
+        <img class="card-img-top img-card" src="{{this.imagePreview}}" alt="Card image cap">
         <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">Some quick example text to build on the card title and make up...</p>
+            <h5 class="card-title">{{this.title}}</h5>
+            <p class="card-text">{{this.description}}</p>
             <a href="/work/:id" class="card-btn btn btn-primary btn-block">View</a>
         </div>
     </div>
 
-    <div class="card-container" style="width: 18rem;">
-        <img class="card-img-top img-card" src="/images/template.jpg" alt="Card image cap">
-        <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">Some quick example text to build on the card title and make up...</p>
-            <a href="/work/:id" class="card-btn btn btn-primary btn-block">View</a>
-        </div>
-    </div>
 
-    <div class="card-container" style="width: 18rem;">
-        <img class="card-img-top img-card" src="/images/template.jpg" alt="Card image cap">
-        <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">Some quick example text to build on the card title and make up...</p>
-            <a href="/work/:id" class="card-btn btn btn-primary btn-block">View</a>
-        </div>
-    </div>
-
-    <div class="card-container" style="width: 18rem;">
-        <img class="card-img-top img-card" src="/images/template.jpg" alt="Card image cap">
-        <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">Some quick example text to build on the card title and make up...</p>
-            <a href="/work/:id" class="card-btn btn btn-primary btn-block">View</a>
-        </div>
-    </div>
-
-    <div class="card-container" style="width: 18rem;">
-        <img class="card-img-top img-card" src="/images/template.jpg" alt="Card image cap">
-        <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">Some quick example text to build on the card title and make up...</p>
-            <a href="/work/:id" class="card-btn btn btn-primary btn-block">View</a>
-        </div>
-    </div>
-
+    {{/each}}
 
 
 </div>
