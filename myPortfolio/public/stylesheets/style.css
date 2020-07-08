@@ -5,7 +5,7 @@
 
 
 body {
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  /* font: 14px "Lucida Grande", Helvetica, Arial, sans-serif; */
   background-color: #F3F4F9;
   width: 100vw;
   /* height: 100vh; */
@@ -16,7 +16,7 @@ a {
 }
 
 .home {
-  max-width: 1140px;
+  max-width: 90%;
   height: calc(100vh - 40px);
   margin: 20px auto;
 
