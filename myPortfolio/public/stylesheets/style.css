@@ -1,3 +1,5 @@
+/* GENERAL */
+
 * {
   margin: 0;
   padding: 0;
@@ -22,6 +24,8 @@ a {
 
 }
 
+/* STRUCTURE */
+
 .info-container {
   width: calc(30% - 40px);
   height: calc(100vh - 80px);
@@ -38,6 +42,12 @@ a {
   height: calc(100vh - 80px);
 }
 
+.margin-container {
+  margin: 30px;
+}
+
+/* INFO CONTAINER */
+
 .profile-container {
   text-align: center;
   background-color: red;
@@ -51,10 +61,6 @@ a {
   margin: 0 auto;
 }
 
-.margin-container {
-  margin: 20px;
-}
-
 .link-container {
   background-color: black;
   width: 45%;
@@ -65,6 +71,8 @@ a {
 .contact-me {
   background-color: blue;
 }
+
+/* CONTENT CONTAINER */
 
 .filter-container {
   margin: 20px 0;
@@ -77,32 +85,33 @@ a {
 }
 
 .card-container {
-  min-width: 150px;
+  /* min-width: 150px;
   max-width: 150px;
   min-height: 220px;
-  max-height: 250px;
+  max-height: 250px; */
   margin: 0px 15px 15px 0;
   border-radius: 10px;
   box-shadow: 0 2px 14px rgba(126,87,88,.1), 0 3px 6px rgba(0,0,0,.08);
 }
 
 .card-btn {
-  font-size: 10px !important;
+  margin-bottom: 10px;
+  /* font-size: 10px !important; */
 }
 
 .card-title {
-  font-size: 14px;
-  font-weight: 600;
+  /* font-size: 14px;
+  font-weight: 600; */
 } 
 
 .card-text {
-  font-size: 10px;
+  /* font-size: 10px; */
 } 
 
 .card-block {
   display: flex;
   flex-wrap: wrap;
-  max-height:70vh;
+  /* max-height:70vh; */
 }
 
 .card-body {
@@ -110,7 +119,7 @@ a {
 }
 
 .img-card {
-  max-height: 80px;
+  /* max-height: 80px; */
   object-fit: cover;
   background-repeat: no-repeat;
 }
