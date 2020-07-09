@@ -5,7 +5,7 @@ const Work = require("../models/Work");
 
 /* GET home page. */
 router.get("/", (req, res, next) => {
-  Work.find({})
+  Work.find()
     .then((dbResult) => {
       res.render("index", { allWork: dbResult });
     })
@@ -15,7 +15,14 @@ router.get("/", (req, res, next) => {
 });
 
 router.get("/work/:id", (req, res, next) => {
-  res.render("workDetails");
+  Work.findById(req.params.id)
+    .then((workId) => {
+      // console.log(dbRes);
+      res.render("workDetails", { workId });
+    })
+    .catch((err) => {
+      console.log(err);
+    });
 });
 
 module.exports = router;
