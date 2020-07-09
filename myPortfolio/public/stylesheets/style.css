@@ -40,6 +40,14 @@ a {
   height: calc(100vh - 80px);
 }
 
+.full-container {
+  width: 100%;
+  margin: 20px;
+  background-color: white;
+  border-radius: 10px;
+  height: calc(100vh - 80px);
+}
+
 .margin-container {
   margin: 30px;
 }
