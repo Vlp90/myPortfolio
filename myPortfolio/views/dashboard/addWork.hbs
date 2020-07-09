@@ -9,23 +9,16 @@
                 <a href="/dashboard" class="card-btn btn btn-outline-primary">Return</a>
                 <h1>Add new</h1>
 
-                <form class="form" action="/dashboard" method="POST">
+                <form class="form" autocomplete="off" action="/dashboard/add" method="POST">
 
                     <div class="row">
 
                         <div class='form-group col-6'>
                             <label class="label" for="title">Title</label>
                             <input class="form-control" id="title" type="text" name="title" placeholder="Title"
-                                required>
+                                >
                         </div>
 
-                        <div class='form-group col-6'>
-                            {{!-- no date in the past --}}
-                            <label class="label" for="date">Creation date</label>
-                            {{!-- <input class="input" type="hidden" id="timezone" name="timezone" value="+02:00"> --}}
-                            <input class="form-control" id="date" type="datetime-local" name="date" class="form-input"
-                                min="30/04/2020" required>
-                        </div>
 
                         <div class="form-group col-12">
 
@@ -34,62 +27,61 @@
                                 rows="3"></textarea>
                         </div>
 
-                    <div class="form-group col-12">
-                        <label for="place">Link</label>
-                        <input id="location" type="string" name="place" placeholder="Link or location for the event"
-                            class="form-control" required>
-                    </div>
+                        <div class="form-group col-12">
+                            <label for="place">Link</label>
+                            <input id="location" type="string" name="link" placeholder="Link or location for the event"
+                                class="form-control" >
+                        </div>
+
+                        {{!-- TAG PART  --}}
+
+
                         {{!-- <input type="text"
                             value="Amsterdam,Washington,Sydney,Beijing,Cairo,Washington,Sydney,Beijing,Cairo"
                             data-role="tagsinput"> --}}
 
-                            {{!-- <select multiple data-role="tagsinput">
-  <option value="Amsterdam">Amsterdam</option>
-  <option value="Washington">Washington</option>
-  <option value="Sydney">Sydney</option>
-  <option value="Beijing">Beijing</option>
-  <option value="Cairo">Cairo</option>
-</select> --}}
+                        {{!-- <select multiple data-role="tagsinput">
+                            <option value="Amsterdam">Amsterdam</option>
+                            <option value="Washington">Washington</option>
+                            <option value="Sydney">Sydney</option>
+                            <option value="Beijing">Beijing</option>
+                            <option value="Cairo">Cairo</option>
+                            </select> --}}
 
+                        {{!-- UPLOAD TO CLOUDINARY --}}
 
-                        <div class="form-group col-12">
+                        {{!-- <div class="form-group col-12">
                             <label class="label" for="validatedCustomFile">Choose file 1...</label>
-                            <input class="form-control" type="file" id="validatedCustomFile" required>
+                            <input class="form-control" type="file" id="validatedCustomFile" >
                         </div>
 
 
                         <div class="form-group col-12">
                             <label class="label" for="validatedCustomFile">Choose file 2...</label>
-                            <input class="form-control" type="file" id="validatedCustomFile" required>
+                            <input class="form-control" type="file" id="validatedCustomFile" >
                         </div>
 
 
                         <div class="form-group col-12">
                             <label class="label" for="validatedCustomFile">Choose file 3...</label>
-                            <input class="form-control" type="file" id="validatedCustomFile" required>
+                            <input class="form-control" type="file" id="validatedCustomFile" >
                         </div>
 
 
                         <div class="form-group col-12">
                             <label class="label" for="validatedCustomFile">Choose file 4...</label>
-                            <input class="form-control" type="file" id="validatedCustomFile" required>
+                            <input class="form-control" type="file" id="validatedCustomFile" >
                         </div>
 
-                            <div class="form-group col-12">
+                        <div class="form-group col-12">
                             <label class="label" for="validatedCustomFile">Choose video...</label>
-                            <input class="form-control" type="file" id="validatedCustomFile" required>
+                            <input class="form-control" type="file" id="validatedCustomFile" >
+                        </div> --}}
+
+                        <div>
+
+                            <button class="btn-adjustment btn btn-primary">Submit</button>
                         </div>
-
-
-
-
-
-
-                  
-                    <div>
-
-                    <button class="btn-adjustment btn btn-primary">Submit</button>
-                    </div>
                 </form>
 
             </div>

@@ -27,6 +27,7 @@ const workSchema = new Schema({
   //     ],
   //   },
   tag: [String],
+  link: String,
   video: String,
   imgOne: String,
   imgTwo: String,

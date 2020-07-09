@@ -20,7 +20,6 @@ const listener = app.listen(process.env.PORT, () => {
 
 // mongoose.connect('mongodb://localhost/myportfolio');
 
-
 // SESSION SETUP
 app.use(
   session({
@@ -54,9 +53,16 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
+
+
+
 const index = require('./routes/index');
+const adminsRouter = require('./routes/dashboard')
+
+
 app.use('/', index);
-app.use("/dashboard", require("./routes/dashboard"));
+// app.use("/", require("./routes/dashboard"));
+app.use('/dashboard', adminsRouter)
 
 // catch 404 and forward to error handler
 app.use((req, res, next) => {
