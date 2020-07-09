@@ -90,6 +90,14 @@ a {
   border-radius: 10px;
 }
 
+.tag {
+  display: inline-block;
+  padding: 5px 10px;
+  background-color: #EAF0F8;
+  border-radius: 15px;
+  color: #8097B3;
+}
+
 .card-container {
   /* min-width: 150px;
   max-width: 150px;
@@ -135,4 +143,17 @@ a {
 
 .card-img {
   object-fit: contain;
+}
+
+
+/* DASHBOARD */
+
+.table img {
+  width: 50px;
+  /* height: 50px;
+  object-fit: cover; */
+}
+
+.table tr td {
+  padding: 10px;
 }

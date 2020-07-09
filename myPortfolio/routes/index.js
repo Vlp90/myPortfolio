@@ -33,8 +33,16 @@ router.get('/login', (req,res, next) => {
   res.render('login')
 })
 
-router.get('/dashboard', (req,res, next) => {
-  res.render('dashboard')
-})
+
+router.get("/dashboard", (req, res, next) => {
+  Work.find()
+    .then((dbResult) => {
+      // console.log(dbResult)
+      res.render("dashboard/manage", { allWork: dbResult });
+    })
+    .catch((err) => {
+      console.log(err);
+    });
+});
 
 module.exports = router;

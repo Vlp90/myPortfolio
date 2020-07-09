@@ -1,0 +1,52 @@
+<main class='container-fluid'>
+
+    <div class='home row'>
+
+        {{!-- LEFT SIDE --}}
+        <div class='full-container'>
+            <div class='margin-container'>
+
+                <h1>Dasboard</h1>
+
+                <table class="table">
+                    <thead>
+                        <th>Image</th>
+                        <th>Name</th>
+                        <th>Tags</th>
+                        <th>Date</th>
+                        <th>Actions</th>
+                    </thead>
+
+                    <tbody>
+                        {{#each allWork}}
+                        <tr>
+                            <td><img width="50px" src="{{this.imagePreview}}" /></td>
+                            <td>{{this.title}}</td>
+
+                            <td>
+                                {{!-- {{this.tag}} --}}
+                                {{#each this.tag}}
+                                <li class="tag">{{this}}</li>
+                                {{/each}}
+
+                            </td>
+
+                            <td>{{this.dateCreation}}</td>
+                            <td> 
+                            <a class='btn btn-primary' href="/foods/edit/{{this._id}}">Edit</a> / 
+                            <a class="btn btn-danger" href="/foods/delete/{{this._id}}">Delete</a>
+                            </td>
+                        </tr>
+                        {{/each}}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+</main>
