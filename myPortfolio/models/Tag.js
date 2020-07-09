@@ -19,6 +19,7 @@ const tagSchema = new Schema({
       "CSS",
       "Material UI",
       "Bootstrap",
+      "JQuery",
       "MongoDB",
     ],
   },

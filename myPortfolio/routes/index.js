@@ -34,15 +34,15 @@ router.get('/login', (req,res, next) => {
 })
 
 
-router.get("/dashboard", (req, res, next) => {
-  Work.find()
-    .then((dbResult) => {
-      // console.log(dbResult)
-      res.render("dashboard/manage", { allWork: dbResult });
-    })
-    .catch((err) => {
-      console.log(err);
-    });
-});
+// router.get("/dashboard", (req, res, next) => {
+//   Work.find()
+//     .then((dbResult) => {
+//       // console.log(dbResult)
+//       res.render("dashboard/manage", { allWork: dbResult });
+//     })
+//     .catch((err) => {
+//       console.log(err);
+//     });
+// });
 
 module.exports = router;

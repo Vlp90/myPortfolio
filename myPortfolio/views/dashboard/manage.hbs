@@ -6,7 +6,10 @@
         <div class='full-container'>
             <div class='margin-container'>
 
-                <h1>Dasboard</h1>
+                <div class='heading-manage'>
+                    <h1>Dasboard</h1>
+                    <a class='btn btn-primary' href="dashboard/create">Add new</a>
+                </div>
 
                 <table class="table">
                     <thead>
@@ -26,15 +29,15 @@
                             <td>
                                 {{!-- {{this.tag}} --}}
                                 {{#each this.tag}}
-                                <li class="tag">{{this}}</li>
+                                <li class="vignette-tag">{{this}}</li>
                                 {{/each}}
 
                             </td>
 
                             <td>{{this.dateCreation}}</td>
-                            <td> 
-                            <a class='btn btn-primary' href="/foods/edit/{{this._id}}">Edit</a> / 
-                            <a class="btn btn-danger" href="/foods/delete/{{this._id}}">Delete</a>
+                            <td>
+                                <a class='btn btn-secondary' href="/foods/edit/{{this._id}}">Edit</a> /
+                                <a class="btn btn-danger" href="/foods/delete/{{this._id}}">Delete</a>
                             </td>
                         </tr>
                         {{/each}}

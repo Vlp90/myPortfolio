@@ -56,6 +56,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 const index = require('./routes/index');
 app.use('/', index);
+app.use("/dashboard", require("./routes/dashboard"));
 
 // catch 404 and forward to error handler
 app.use((req, res, next) => {
