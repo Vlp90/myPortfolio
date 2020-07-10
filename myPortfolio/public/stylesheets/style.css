@@ -65,8 +65,19 @@ a {
   border-radius: 10px;
 }
 
-.profile-location h6 {
+.profile-location {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   padding-bottom: 20px;
+}
+
+.profile-location h6 {
+  margin-left: 10px;
+}
+
+.profile-location i {
+  margin-bottom: 0.5rem;
 }
 
 .profile-pic {
