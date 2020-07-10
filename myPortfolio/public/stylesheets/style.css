@@ -107,32 +107,21 @@ a {
 width: 20%;
 }
 
-.link-container img {
-  border-radius: 20px;
-  width: 100%;
-  max-height: 75px;
-  object-fit: cover;
-}
-
-.stack-container img {
+.link-container img, .stack-container img {
   border-radius: 20px;
   width: 100%;
   max-height: 75px;
   min-height: 75px;
-
   object-fit: cover;
 }
 
-.link-container p {
+
+
+.link-container p, .stack-container p {
   text-align: center;
   text-decoration: none;
 }
 
-.stack-container p {
-  text-align: center;
-  text-decoration: none;
-  /* width: 100; */
-}
 
 
 .contact-me {
