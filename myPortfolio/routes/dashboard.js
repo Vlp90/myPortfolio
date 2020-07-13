@@ -1,9 +1,11 @@
 const express = require("express");
 const router = express.Router();
 
+const protectRoute = require("../middlewares/protectRoute");
+
 const Work = require("../models/Work");
 
-router.get("/", (req, res, next) => {
+router.get("/", protectRoute, (req, res, next) => {
   Work.find()
     .then((dbResult) => {
       console.log(dbResult);
@@ -15,7 +17,7 @@ router.get("/", (req, res, next) => {
 });
 
 // FORM
-router.get("/create", (req, res, next) => {
+router.get("/create", protectRoute, (req, res, next) => {
   res.render("dashboard/addWork");
 });
 
