@@ -59,6 +59,22 @@ app.use(express.static(path.join(__dirname, 'public')));
 const index = require('./routes/index');
 const adminsRouter = require('./routes/dashboard')
 
+// CHECK THE STATUS OF SESSION
+app.use((req, res, next) => {
+  // console.log(req.session.currentUser, "----- user session");
+  // we defined this key inside router.post("/signin").
+  if (req.session.currentUser) {
+    // res.locals.YOURVARIABLE is a way to define variables accessible
+    // to the template (hbs) during the request / response cycle.
+    // We can reference this variable in our template, it allows us to
+    // Know if a user is loggedIn, can be used to do render certain parts of the layout :)
+    res.locals.user = req.session.currentUser; // Allows us to access user info with the user key in the template
+    res.locals.isLoggedIn = true;
+  } else {
+    res.locals.isLoggedIn = false;
+  }
+  next();
+});
 
 app.use('/', index);
 // app.use("/", require("./routes/dashboard"));
@@ -81,8 +97,6 @@ app.use((err, req, res, next) => {
   res.status(err.status || 500);
   res.render('error');
 });
-
-
 
 
 module.exports = app;
