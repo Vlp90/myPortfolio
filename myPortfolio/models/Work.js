@@ -3,6 +3,7 @@ const Schema = mongoose.Schema;
 
 const workSchema = new Schema({
   title: String,
+  // image: [String],
   description: String,
   imagePreview: String,
   dateCreation: Date,

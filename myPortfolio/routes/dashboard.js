@@ -39,9 +39,51 @@ router.get("/create", protectRoute, (req, res, next) => {
 //     });
 // });
 
-router.post("/add", upload.single("imagePreview"), (req, res, next) => {
+// router.post("/add", upload.single("images"), (req, res, next) => {
+//   const { title, date, description, link } = req.body;
+//   const imagePreview = req;
+//   const imgOne = req.file.url;
+
+//   console.log(imagePreview)
+
+//   if (title === "" || date === "" || description === "" || link === "") {
+//     return res.redirect("/dashboard/create");
+//   }
+
+//   const newWork = new Work({
+//     title,
+//     date,
+//     description,
+//     link,
+//     imagePreview,
+//     imgOne,
+//   });
+
+//   newWork
+//     .save()
+//     .then((dbRes) => {
+//       console.log(dbRes);
+//       res.redirect("/dashboard");
+//     })
+//     .catch((err) => {
+//       console.log(err);
+//     });
+
+// });
+
+router.post("/add", upload.array("image"), (req, res, next) => {
   const { title, date, description, link } = req.body;
-  const imagePreview = req.file.url;
+  const imagePreview = req.files[0].url;
+  const imgOne =  req.files[1].url;
+  // const imgTwo =  req.files[2].url;
+  // const imgThree =  req.files[3].url;
+
+  // const image = req.files[0].url;
+
+  console.log("image1", imagePreview);
+  console.log("image2", imgOne);
+  // console.log("image3", imgTwo);
+  // console.log("image4", imgThree);
 
   if (title === "" || date === "" || description === "" || link === "") {
     return res.redirect("/dashboard/create");
@@ -52,7 +94,9 @@ router.post("/add", upload.single("imagePreview"), (req, res, next) => {
     date,
     description,
     link,
+    // image,
     imagePreview,
+    imgOne,
   });
 
   newWork
