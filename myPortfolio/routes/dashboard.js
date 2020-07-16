@@ -2,8 +2,8 @@ const express = require("express");
 const router = express.Router();
 
 const protectRoute = require("../middlewares/protectRoute");
-
 const Work = require("../models/Work");
+const upload = require("../config/cloudinary");
 
 router.get("/", protectRoute, (req, res, next) => {
   Work.find()
@@ -39,18 +39,37 @@ router.get("/create", protectRoute, (req, res, next) => {
 //     });
 // });
 
-router.post("/add", (req, res, next) => {
+router.post("/add", upload.single("imagePreview"), (req, res, next) => {
   const { title, date, description, link } = req.body;
+  const imagePreview = req.file.url;
 
   if (title === "" || date === "" || description === "" || link === "") {
     return res.redirect("/dashboard/create");
   }
-  Work.create({ title, date, description, link })
+
+  const newWork = new Work({
+    title,
+    date,
+    description,
+    link,
+    imagePreview,
+  });
+
+  newWork
+    .save()
     .then((dbRes) => {
       console.log(dbRes);
       res.redirect("/dashboard");
     })
-    .catch(next);
+    .catch((err) => {
+      console.log(err);
+    });
+  // Work.create({ title, date, description, link })
+  //   .then((dbRes) => {
+  //     console.log(dbRes);
+  //     res.redirect("/dashboard");
+  //   })
+  //   .catch(next);
 });
 
 module.exports = router;
