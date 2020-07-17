@@ -123,7 +123,31 @@ a {
 }
 
 .contact-me {
-  background-color: blue;
+  margin-top: 15px;
+  background-color: #212b4c;
+  display: flex;
+  /* justify-content: center; */
+  flex-wrap: nowrap;
+  align-items: center;
+  border-radius: 10px;
+
+}
+
+.contact-emoji {
+padding: 10px 15px;
+background-color: white;
+margin: 20px 20px 20px 20px;
+border-radius: 10px;
+}
+
+.contact-emoji-size {
+  font-size: 1.5rem;
+}
+
+.contact-me-text {
+  color: white;
+  font-size: 1.2rem;
+
 }
 
 /* CONTENT CONTAINER */
