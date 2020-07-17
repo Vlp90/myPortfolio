@@ -9,6 +9,7 @@ const tagSchema = new Schema({
       "Front-end",
       "Back-end",
       "Game",
+      "Wordpress",
       "UI, UX",
       "Node.js",
       "Canvas",
