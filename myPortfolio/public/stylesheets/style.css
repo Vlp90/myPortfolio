@@ -296,10 +296,20 @@ a:hover {
 
 .search-align {
   display: flex;
+  margin-top: 15px;
+margin-right: 15px;
 }
 
 .search-size {
   /* width: 500px; */
+  background-color: #F3F4F9;
+  border: 0px;
+  padding-left: 20px;
+}
+
+.search-size::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: #BEBEBE;
+  opacity: 1; /* Firefox */
 }
 
 .search-bar {

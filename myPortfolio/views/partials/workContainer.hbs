@@ -5,7 +5,9 @@
         <div class="form-group search-align">
             <input type="text" name="search" placeholder="Front end, Javascript, React..."
                 class="form-control search-size">
-            <input type="submit" value="Search" class="btn btn-primary">
+            <button class="btn btn-primary" type="submit"> <i class="fa fa-search" aria-hidden="true"></i>
+            </button>
+            {{!-- <input for='search' type="submit" class="btn btn-primary" test> --}}
         </div>
     </form>
 
@@ -66,7 +68,7 @@
                     <img class="card-cover" src="{{this.imagePreview}}" alt="my work presentation">
                 </div>
 
-            
+
 
                 <div class="card-body">
                     <h5 class="card-title">{{this.title}}</h5>
