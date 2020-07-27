@@ -1,8 +1,6 @@
 const express = require("express");
 const router = express.Router();
 
-
-
 const Work = require("../models/Work");
 const User = require("../models/User");
 
@@ -10,16 +8,46 @@ const bcrypt = require("bcrypt");
 const bcryptSalt = 10;
 
 /* GET home page. */
-router.get("/", (req, res, next) => {
-  Work.find()
-    .then((dbResult) => {
-      res.render("index", { allWork: dbResult });
-    })
-    .catch((err) => {
-      console.log(err);
+// router.get("/", (req, res, next) => {
+//   Work.find()
+//     .then((dbResult) => {
+//       res.render("index", { allWork: dbResult });
+//     })
+//     .catch((err) => {
+//       console.log(err);
+//     });
+// });
+
+// SEARCH
+//INDEX - show all campgrounds
+router.get("/", function (req, res) {
+  var noMatch = null;
+  if (req.query.search) {
+    const regex = new RegExp(escapeRegex(req.query.search), "gi");
+    // Get all work from DB
+    Work.find({ title: regex }, function (err, allCampgrounds) {
+      if (err) {
+        console.log(err);
+      } else {
+        if (allCampgrounds.length < 1) {
+          noMatch = "No campgrounds match that query, please try again.";
+        }
+        res.render("index", { allWork: allCampgrounds, noMatch: noMatch });
+      }
     });
+  } else {
+    // Get all work from DB
+    Work.find({}, function (err, allCampgrounds) {
+      if (err) {
+        console.log(err);
+      } else {
+        res.render("index", { allWork: allCampgrounds, noMatch: noMatch });
+      }
+    });
+  }
 });
 
+// GET ID
 router.get("/work/:id", (req, res, next) => {
   Work.findById(req.params.id)
     .then((workId) => {
@@ -68,7 +96,7 @@ router.post("/signup", (req, res, next) => {
       const hashPass = bcrypt.hashSync(password, salt);
 
       User.create({
-        username : username,
+        username: username,
         password: hashPass,
       })
         .then((result) => {
@@ -133,5 +161,9 @@ router.get("/logout", (req, res) => {
     res.redirect("/");
   });
 });
+
+function escapeRegex(text) {
+  return text.replace(/[-[\]{}()*+?.,\\^$|#\s]/g, "\\$&");
+};
 
 module.exports = router;
