@@ -1,9 +1,10 @@
-<div >
+<div>
     <h1>Welcome into my world 👋</h1>
 
-    <form action="/" method="GET" class="">
-        <div class="form-group test">
-            <input type="text" name="search" placeholder="Front end, Javascript, React..." class="form-control search-size">
+    <form action="/" method="GET" class="search-bar">
+        <div class="form-group search-align">
+            <input type="text" name="search" placeholder="Front end, Javascript, React..."
+                class="form-control search-size">
             <input type="submit" value="Search" class="btn btn-primary">
         </div>
     </form>
@@ -21,10 +22,9 @@
 </div> --}}
 
 {{!--  CARDS--}}
-{{#if allWork}}
+{{!-- {{#if allWork}}
 <h3>Latest projects</h3>
-{{/if}}
-<div class='card-block'>
+{{/if}} --}}
 
     {{#if noMatch}}
     <div class='message-search-err'>
@@ -34,20 +34,47 @@
     </div>
     {{/if}}
 
+{{!-- <div class='card-group card-align-center'>
     {{#each allWork}}
-    <div class="card-container" style="width: 18rem;">
-        <div class='img-container'>
-            <img class="card-img" src="{{this.imagePreview}}" alt="my work presentation">
-        </div>
-        {{!-- <img class="card-img-top img-card" src="{{this.imagePreview}}" alt="Card image cap"> --}}
+    <div class=''>
 
-        <div class="card-body">
-            <h5 class="card-title">{{this.title}}</h5>
-            <p class="card-text">{{this.description}}</p>
-            <a href="/work/{{this._id}}" class="card-btn btn btn-primary btn-block">View</a>
+        <div class="card-container">
+            <div class='img-container'>
+                <img class="card-img" src="{{this.imagePreview}}" alt="my work presentation">
+            </div>
+
+            <div class="card-body">
+                <h5 class="card-title">{{this.title}}</h5>
+                <p class="card-text">{{this.description}}</p>
+                <a href="/work/{{this._id}}" class="card-btn btn btn-primary btn-block">View</a>
+            </div>
         </div>
     </div>
     {{/each}}
 
+</div> --}}
 
+<div class="container-fluid">
+
+<div class='card-group row card-deck'>
+    {{#each allWork}}
+    
+        <div class="col-sm-12 col-md-6 col-lg-4">
+            <div class="card-container mr-3 mb-3">
+
+            <div class='img-container'>
+                <img class="card-img" src="{{this.imagePreview}}" alt="my work presentation">
+            </div>
+
+            <div class="card-body">
+                <h5 class="card-title">{{this.title}}</h5>
+                <p class="card-text">{{this.description}}</p>
+                <a href="/work/{{this._id}}" class="card-btn btn btn-primary btn-block">View</a>
+            </div>
+        </div>
+            </div>
+    
+    {{/each}}
+
+</div>
 </div>
