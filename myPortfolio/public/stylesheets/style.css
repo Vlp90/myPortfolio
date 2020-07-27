@@ -350,16 +350,36 @@ a:hover {
   padding: 10px 20px;
 }
 
-.img-container {
-  height: 190px;
-  width: 100%;
+
+/* .div-img {
   display: flex;
-  overflow: hidden;
-  align-items: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: flex-start;
+} */
+
+img {
+  /* width:auto; */
+  /* height: 190px; */
 }
 
-.card-img {
-  object-fit: contain;
+/* .cover {
+  object-fit: cover;
+} */
+
+.img-container {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  overflow: hidden;
+  /* background-color: blue; */
+}
+
+.card-cover {
+  object-fit: cover;
+  width: 100%;
+  height: 200px;
 }
 
 /* DASHBOARD */
@@ -569,4 +589,11 @@ a:hover {
 
 .bootstrap-tagsinput .tag [data-role="remove"]:hover:active {
   box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+}
+
+
+h2 {
+  font-family: 'Courier New', monospace;
+  font-size: 1em;
+  margin: 1em 0 0.3em;
 }
