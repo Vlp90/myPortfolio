@@ -74,9 +74,9 @@ router.get("/create", protectRoute, (req, res, next) => {
 router.post("/add", upload.array("image"), (req, res, next) => {
   const { title, date, description, link } = req.body;
   const imagePreview = req.files[0].url;
-  const imgOne =  req.files[1].url;
-  const imgTwo =  req.files[2].url;
-  const imgThree =  req.files[3].url;
+  const imgOne = req.files[1].url;
+  const imgTwo = req.files[2].url;
+  const imgThree = req.files[3].url;
 
   // const image = req.files[0].url;
 
@@ -85,8 +85,12 @@ router.post("/add", upload.array("image"), (req, res, next) => {
   // console.log("image3", imgTwo);
   // console.log("image4", imgThree);
 
-  if (title === "" || date === "" || description === "" || link === "") {
-    return res.redirect("/dashboard/create");
+  // if (title === "" || date === "" || description === "" || link === "") {
+  //   return res.redirect("/dashboard/create");
+  // }
+
+  if (imagePreview == "" || imgOne === "" || imgTwo === "" || imgThree === "") {
+    return null;
   }
 
   const newWork = new Work({
@@ -116,6 +120,17 @@ router.post("/add", upload.array("image"), (req, res, next) => {
   //     res.redirect("/dashboard");
   //   })
   //   .catch(next);
+});
+
+router.get("/:id/delete/", (req, res, next) => {
+  Work.findByIdAndDelete(req.params.id)
+    .then((dbRes) => {
+      res.redirect("/dashboard");
+      console.log(dbRes);
+    })
+    .catch((err) => {
+      console.log(err);
+    });
 });
 
 module.exports = router;
