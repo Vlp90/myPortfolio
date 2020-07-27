@@ -25,7 +25,7 @@ router.get("/", function (req, res) {
   if (req.query.search) {
     const regex = new RegExp(escapeRegex(req.query.search), "gi");
     // Get all work from DB
-    Work.find({ title: regex }, function (err, allCampgrounds) {
+    Work.find({ tag: regex }, function (err, allCampgrounds) {
       if (err) {
         console.log(err);
       } else {
