@@ -14,11 +14,11 @@ body {
 
 a {
   color: none;
-  text-decoration:none;
+  text-decoration: none;
 }
 
 a:hover {
-  text-decoration:none;
+  text-decoration: none;
 }
 
 
@@ -103,7 +103,7 @@ a:hover {
   justify-content: space-between;
 }
 
-.link-container img:hover  {
+.link-container img:hover {
   /* width: 50%; */
   box-shadow: 0 2px 14px rgba(126, 87, 88, 0.1), 0 3px 6px rgba(0, 0, 0, 0.08);
   filter: brightness(70%);
@@ -154,19 +154,20 @@ a:hover {
 
 }
 
-.contact-me:hover  {
+.contact-me:hover {
   background-color: #0167d4;
 }
 
-.contact-me, .contact-emoji:hover {
+.contact-me,
+.contact-emoji:hover {
   background-color: #212b4c;
 }
 
 .contact-emoji {
-padding: 10px 15px;
-background-color: white;
-margin: 20px 20px 20px 20px;
-border-radius: 10px;
+  padding: 10px 15px;
+  background-color: white;
+  margin: 20px 20px 20px 20px;
+  border-radius: 10px;
 }
 
 
@@ -209,6 +210,12 @@ border-radius: 10px;
   background-color: #eaf0f8;
   border-radius: 10px;
   color: #8097b3;
+}
+
+.message-search-err {
+  text-align: center;
+  width: 100%;
+  margin-top: 10vh;
 }
 
 .card-container {

@@ -13,7 +13,7 @@
     <button>filter</button>
 </div>
 {{!-- FILTERS --}}
-<div class="filter-container">
+{{!-- <div class="filter-container">
     <a class='filter-tag' href="">All</a>
     <a class='filter-tag' href="">Web Development</a>
     <a class='filter-tag' href="">Games</a>
@@ -21,13 +21,22 @@
     <a class='filter-tag' href="">Full Stack</a>
     <a class='filter-tag' href="">Front-end</a>
     <a class='filter-tag' href="">Back-end</a>
-</div>
+</div> --}}
 
 {{!--  CARDS--}}
-
+{{#if allWork}}
 <h3>Latest projects</h3>
-
+{{/if}}
 <div class='card-block'>
+
+    {{#if noMatch}}
+    <div class='message-search-err'>
+        <h2>Sorry</h2>
+        <p>There is no result...</p>
+
+    </div>
+    {{/if}}
+
     {{#each allWork}}
     <div class="card-container" style="width: 18rem;">
         <div class='img-container'>
