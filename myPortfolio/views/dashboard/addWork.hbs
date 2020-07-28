@@ -9,28 +9,36 @@
                 <a href="/dashboard" class="card-btn btn btn-outline-primary">Return</a>
                 <h1>Add new</h1>
 
-                <form class="form" autocomplete="off" action="/dashboard/add" method="POST" enctype="multipart/form-data">
+                <form class="form" autocomplete="off" action="/dashboard/add" method="POST"
+                    enctype="multipart/form-data">
 
                     <div class="row">
 
                         <div class='form-group col-6'>
                             <label class="label" for="title">Title</label>
-                            <input class="form-control" id="title" type="text" name="title" placeholder="Title"
-                                >
+                            <input class="form-control" id="title" type="text" name="title" placeholder="Title">
+                        </div>
+
+                        <div class="form-group col-6">
+                            <label for="start">Date de création</label>
+                            <input class='form-control' type="date" id="creationDate" name="creationDate">
+
+                            {{!-- <input class="form-control" type="date" id="start" name="trip-start" value="2010-07-22" min="2010-01-01"
+                                > --}}
                         </div>
 
 
                         <div class="form-group col-12">
 
                             <label for="description">Description</label>
-                            <textarea class="form-control" type='text' id="description" placeholder="Description" name='description'
-                                rows="3"></textarea>
+                            <textarea class="form-control" type='text' id="description" placeholder="Description"
+                                name='description' rows="3"></textarea>
                         </div>
 
                         <div class="form-group col-12">
                             <label for="place">Link to website</label>
                             <input id="location" type="string" name="link" placeholder="Link or location for the event"
-                                class="form-control" >
+                                class="form-control">
                         </div>
 
                         {{!-- TAG PART  --}}
@@ -52,31 +60,31 @@
 
                         <div class="form-group col-6">
                             <label class="label" for="file-1">Choose Image preview...</label>
-                            <input class="form-control" name="image" type="file" id="file-1" >
+                            <input class="form-control" name="image" type="file" id="file-1">
                         </div>
 
 
                         <div class="form-group col-6">
                             <label class="label" for="file-2">Choose image 2...</label>
-                            <input class="form-control" name='image' type="file" id="file-2" >
+                            <input class="form-control" name='image' type="file" id="file-2">
                         </div>
 
 
                         <div class="form-group col-6">
                             <label class="label" for="validatedCustomFile">Choose image 3...</label>
-                            <input class="form-control" name='image' type="file" id="file-3" >
+                            <input class="form-control" name='image' type="file" id="file-3">
                         </div>
 
 
                         <div class="form-group col-6">
                             <label class="label" for="validatedCustomFile">Choose image 4...</label>
-                            <input class="form-control" name='image' type="file" id="file-4" >
+                            <input class="form-control" name='image' type="file" id="file-4">
                         </div>
 
                         <div class="form-group col-12">
                             <label class="label" for="validatedCustomFile">Link to video...</label>
-                            <input class="form-control" type="text" id="video" >
-                        </div> 
+                            <input class="form-control" type="text" id="video">
+                        </div>
 
                         <div>
 
