@@ -116,8 +116,6 @@ router.post("/add", upload.single("image"), (req, res, next) => {
     newWork.imagePreview = req.file.url;
   }
 
-  console.log("NEW IMAGE", newWork);
-
   // if (req.files) {
   //   newWork.imagePreview = req.files[0].url;
   //   newWork.imgOne = req.files[1].url;
@@ -171,6 +169,47 @@ router.get("/:id/edit/", (req, res, next) => {
     })
     .catch((err) => {
       console.log(err);
+    });
+});
+
+router.post("/:id/edit", upload.single("image"), (req, res, next) => {
+  let editedWork;
+  if (req.file) {
+    const {
+      title,
+    dateCreation,
+    description,
+    link,
+    video,
+    // imagePreview,
+    imgOne,
+    imgTwo,
+    imgThree,
+    } = req.body;
+    const imagePreview = req.file.url;
+    editedWork = {
+      title,
+      dateCreation,
+      description,
+      link,
+      video,
+      imagePreview,
+      imgOne,
+      imgTwo,
+      imgThree,
+    };
+  } else {
+    editedWork = req.body;
+  }
+
+  Work.findByIdAndUpdate(req.params.id, editedWork, {
+    new: true,
+  })
+    .then((dbRes) => {
+      res.redirect("/dashboard");
+    })
+    .catch((dbErr) => {
+      console.log(dbErr);
     });
 });
 
