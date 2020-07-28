@@ -2,7 +2,6 @@
 
     <div class='home row'>
 
-
         <div class='full-container overflow-auto'>
             <div class='margin-container'>
 
@@ -16,28 +15,27 @@
 
                         <div class='form-group col-6'>
                             <label class="label" for="title">Title</label>
-                            <input class="form-control" id="title" type="text" name="title" placeholder="Title">
+                            <input class="form-control" id="title" value="{{workEdit.title}}" type="text" name="title"
+                                placeholder="Title">
                         </div>
 
                         <div class="form-group col-6">
                             <label for="start">Date de création</label>
-                            <input class='form-control' type="date" id="creationDate" name="creationDate">
-
-                            {{!-- <input class="form-control" type="date" id="start" name="trip-start" value="2010-07-22" min="2010-01-01"
-                                > --}}
+                            <input class='form-control' value="{{workEdit.dateCreation}}" type="date" id="editDate"
+                                name="creationDate">
                         </div>
 
 
                         <div class="form-group col-12">
 
                             <label for="description">Description</label>
-                            <textarea class="form-control" type='text' id="description" placeholder="Description"
-                                name='description' rows="3"></textarea>
+                            <textarea class="form-control" type='text' id="description" name='description'
+                                rows="3">{{workEdit.description}}</textarea>
                         </div>
 
                         <div class="form-group col-12">
                             <label for="place">Link to website</label>
-                            <input id="location" type="string" name="link" placeholder="Link or location for the event"
+                            <input id="location" type="string" name="link" value="{{workEdit.link}}" placeholder="Link or location for the event"
                                 class="form-control">
                         </div>
 
@@ -60,9 +58,12 @@
 
                         <div class="form-group col-6">
                             <label class="label" for="file-1">Choose Image preview...</label>
-                            <input class="form-control" name="image" type="file" id="file-1">
+                            <input class="form-control" value="{{workEdit.imagePreview}}" name="image" type="file" id="file-1">
                         </div>
 
+{{!-- <div class='form-group'>
+<input id="inp_files" type="file" multiple="multiple">
+</div> --}}
 
                         <div class="form-group col-6">
                             <label class="label" for="file-2">Choose image 2...</label>
@@ -83,7 +84,7 @@
 
                         <div class="form-group col-12">
                             <label class="label" for="validatedCustomFile">Link to video...</label>
-                            <input class="form-control" type="text" id="video">
+                            <input class="form-control" value='{{workEdit.video}}' type="text" id="video">
                         </div>
 
                         <div class="form-group col-12">
@@ -94,9 +95,6 @@
         </div>
     </div>
     </div>
-
-
-
 
 
 

@@ -9,3 +9,15 @@ if (day < 10) day = "0" + day;
 
 var today = year + "-" + month + "-" + day;       
 document.getElementById("creationDate").value = today;
+
+
+
+
+
+
+// for (var i = 0; i < e.target.files.length; i++) { 
+//     var file = e.target.files[i];
+//  }
+
+//  document.getElementById('inp_img').value = dataURL;
+// document.getElementById('inp_img').value += dataURL + '|';
