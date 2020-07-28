@@ -133,4 +133,15 @@ router.get("/:id/delete/", (req, res, next) => {
     });
 });
 
+router.get("/:id/edit/", (req, res, next) => {
+  Work.findById(req.params.id)
+    .then((dbRes) => {
+      res.render("dashboard/editWork", { work: dbRes });
+      console.log(dbRes);
+    })
+    .catch((err) => {
+      console.log(err);
+    });
+});
+
 module.exports = router;

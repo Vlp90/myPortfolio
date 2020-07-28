@@ -7,6 +7,10 @@
     Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
 
+.noMargin {
+  margin: 0;
+}
+
 .col,
 .col-1,
 .col-10,
