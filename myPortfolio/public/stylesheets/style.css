@@ -651,10 +651,10 @@ img {
 
   .content-container {
     width: 100%;
-    /* margin: 20px;
+    margin: 0px;
     background-color: white;
     border-radius: 10px;
-    height: calc(100vh - 80px); */
+    height: calc(100vh - 80px);
   }
   
   .full-container {

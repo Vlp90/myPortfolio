@@ -1,7 +1,18 @@
 <div>
     <h1>Welcome into my world 👋</h1>
 
-    <form action="/" method="GET" class="search-bar">
+    <form action="/" method="GET" class="search-bar toHide">
+        <div class="form-group search-align">
+            <input type="text" name="search" placeholder="Front end, Javascript, React..."
+                class="form-control search-size">
+            <button class="btn btn-primary" type="submit"> <i class="fa fa-search" aria-hidden="true"></i>
+            </button>
+            {{!-- <input for='search' type="submit" class="btn btn-primary" test> --}}
+        </div>
+    </form>
+
+{{!-- FORM VERSION MOBILE --}}
+    <form action="/workVM" method="GET" class="search-bar toShow">
         <div class="form-group search-align">
             <input type="text" name="search" placeholder="Front end, Javascript, React..."
                 class="form-control search-size">
@@ -73,7 +84,9 @@
                 <div class="card-body">
                     <h5 class="card-title">{{this.title}}</h5>
                     <p class="card-text">{{this.description}}</p>
-                    <a href="/work/{{this._id}}" class="card-btn btn btn-primary btn-block">View</a>
+                    <a href="/work/{{this._id}}" class="card-btn btn btn-primary btn-block toHide">View</a>
+                    <a href="/workVM/{{this._id}}" class="card-btn btn btn-primary btn-block toShow">ViewMB</a>
+
                 </div>
             </div>
         </div>

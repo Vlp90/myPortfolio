@@ -19,7 +19,7 @@ const bcryptSalt = 10;
 // });
 
 // SEARCH
-//INDEX - show all campgrounds
+//INDEX - show all work
 router.get("/", function (req, res) {
   var noMatch = null;
   if (req.query.search) {
@@ -58,6 +58,80 @@ router.get("/work/:id", (req, res, next) => {
       console.log(err);
     });
 });
+
+//MOBILE VERSION
+
+// router.get("/work/test", function (req, res) {
+//   var noMatch = null;
+//   if (req.query.search) {
+//     const regex = new RegExp(escapeRegex(req.query.search), "gi");
+//     // Get all work from DB
+//     Work.find({ tag: regex }, function (err, allCampgrounds) {
+//       if (err) {
+//         console.log(err);
+//       } else {
+//         if (allCampgrounds.length < 1) {
+//           noMatch = "No campgrounds match that query, please try again.";
+//         }
+//         res.render("workVersionMobile", { allWork: allCampgrounds, noMatch: noMatch });
+//       }
+//     });
+//   } else {
+//     // Get all work from DB
+//     Work.find({}, function (err, allCampgrounds) {
+//       if (err) {
+//         console.log(err);
+//       } else {
+//         res.render("workVersionMobile", { allWork: allCampgrounds, noMatch: noMatch });
+//       }
+//     });
+//   }
+// });
+
+// router.get("/workVM", (req, res, next) => {
+//   res.render("workVersionMobile");
+// });
+
+router.get("/workVM/", function (req, res) {
+  var noMatch = null;
+  if (req.query.search) {
+    const regex = new RegExp(escapeRegex(req.query.search), "gi");
+    // Get all work from DB
+    Work.find({ tag: regex }, function (err, allCampgrounds) {
+      if (err) {
+        console.log(err);
+      } else {
+        if (allCampgrounds.length < 1) {
+          noMatch = "No campgrounds match that query, please try again.";
+        }
+        res.render("workVersionMobile", { allWork: allCampgrounds, noMatch: noMatch });
+      }
+    });
+  } else {
+    // Get all work from DB
+    Work.find({}, function (err, allCampgrounds) {
+      if (err) {
+        console.log(err);
+      } else {
+        res.render("workVersionMobile", { allWork: allCampgrounds, noMatch: noMatch });
+      }
+    });
+  }
+});
+
+// GET ID MOBILE
+router.get("/workVM/:id", (req, res, next) => {
+  Work.findById(req.params.id)
+    .then((workId) => {
+      // console.log(dbRes);
+      res.render("workDetails", { workId });
+    })
+    .catch((err) => {
+      console.log(err);
+    });
+});
+
+
 
 //ADMIN PART
 
@@ -164,6 +238,6 @@ router.get("/logout", (req, res) => {
 
 function escapeRegex(text) {
   return text.replace(/[-[\]{}()*+?.,\\^$|#\s]/g, "\\$&");
-};
+}
 
 module.exports = router;
