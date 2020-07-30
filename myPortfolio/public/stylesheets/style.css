@@ -627,3 +627,50 @@ img {
 .bootstrap-tagsinput .tag [data-role="remove"]:hover:active {
   box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
 }
+
+
+
+/* RESPONSIVE DESIGN */
+
+.toShow {
+  display: none
+}
+
+@media only screen and (max-width: 1450px) {
+  body {
+    /* background-color: red; */
+  }
+
+  .info-container {
+    width: 100%;
+    /* height: calc(100vh - 80px);
+    margin: 20px;
+    background-color: white;
+    border-radius: 10px;  */
+  }
+
+  .content-container {
+    width: 100%;
+    /* margin: 20px;
+    background-color: white;
+    border-radius: 10px;
+    height: calc(100vh - 80px); */
+  }
+  
+  .full-container {
+    /* width: 100%; */
+    margin: 0px;
+    /* background-color: white;
+    border-radius: 10px;
+    height: calc(100vh - 80px); */
+  }
+
+  .toHide {
+  display: none;
+  }
+
+  .toShow {
+    display:block ;
+  }
+  
+}
