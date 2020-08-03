@@ -643,26 +643,25 @@ img {
 
   .info-container {
     width: 100%;
-    /* height: calc(100vh - 80px);
-    margin: 20px;
-    background-color: white;
-    border-radius: 10px;  */
+    margin: 0;
   }
 
   .content-container {
-    width: 100%;
-    margin: 0px;
+    width: calc(100% - 30px);
+    margin: 15px;
     background-color: white;
-    border-radius: 10px;
-    height: calc(100vh - 80px);
+    border-radius: 10px;    
   }
   
+.home{
+  max-width: 100%;
+  margin: 20px auto;
+  padding: 0;
+}
+
   .full-container {
-    /* width: 100%; */
     margin: 0px;
-    /* background-color: white;
-    border-radius: 10px;
-    height: calc(100vh - 80px); */
+    width: 100%;
   }
 
   .toHide {
