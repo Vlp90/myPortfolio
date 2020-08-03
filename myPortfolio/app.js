@@ -1,6 +1,7 @@
 require("dotenv").config();
 require("./config/mongodb"); // database initial setup
 
+
 const express      = require('express');
 const path         = require('path');
 const favicon      = require('serve-favicon');
@@ -12,6 +13,8 @@ const session = require("express-session");
 const MongoStore = require("connect-mongo")(session);
 const app = express();
 const hbs = require("hbs");
+const moment = require("moment");
+
 
 // Server Started
 const listener = app.listen(process.env.PORT, () => {
@@ -33,6 +36,17 @@ app.use(
     resave: true,
   })
 );
+
+
+//HBS HELPERS
+hbs.registerHelper("formatDate", function (date) {
+  return moment(date).format("dddd DD MMMM YYYY");
+});
+
+hbs.registerHelper("formatDateForInput", function (date, compare, options) {
+  if (compare === "current") return moment(date).format("YYYY-MM-DDTkk:mm");
+  if (compare === "min") return moment().format("YYYY-MM-DDTkk:mm");
+});
 
 // initial config
 app.set("view engine", "hbs");

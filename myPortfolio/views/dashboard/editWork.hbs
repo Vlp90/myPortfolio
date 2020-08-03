@@ -21,32 +21,38 @@
 
                         <div class="form-group col-6">
                             <label for="start">Date de création</label>
-                            <input class='form-control' value="{{workEdit.dateCreation}}" type="date" id="editDate"
-                                name="dateCreation">
+                            <input class="form-control" id="editDate" type="datetime-local"
+                                min="{{formatDateForInput workEdit.dateCreation "min"}}" name="dateCreation"
+                                value="{{formatDateForInput workEdit.dateCreation "current"}}">
                         </div>
+                        {{!-- 
+                        <input class="form-input" id="date" type="datetime-local"
+                            min="{{formatDateForInput workEdit.dateCreation "min"}}" name="date"
+                            value="{{formatDateForInput workEdit.dateCreation "current"}}"> --}}
+                    </div>
 
 
-                        <div class="form-group col-12">
+                    <div class="form-group col-12">
 
-                            <label for="description">Description</label>
-                            <textarea class="form-control" type='text' id="description" name='description'
-                                rows="3">{{workEdit.description}}</textarea>
-                        </div>
+                        <label for="description">Description</label>
+                        <textarea class="form-control" type='text' id="description" name='description'
+                            rows="3">{{workEdit.description}}</textarea>
+                    </div>
 
-                        <div class="form-group col-12">
-                            <label for="place">Link to website</label>
-                            <input id="location" type="string" name="link" value="{{workEdit.link}}" placeholder="Link or location for the event"
-                                class="form-control">
-                        </div>
+                    <div class="form-group col-12">
+                        <label for="place">Link to website</label>
+                        <input id="location" type="string" name="link" value="{{workEdit.link}}"
+                            placeholder="Link or location for the event" class="form-control">
+                    </div>
 
-                        {{!-- TAG PART  --}}
+                    {{!-- TAG PART  --}}
 
 
-                        {{!-- <input type="text"
+                    {{!-- <input type="text"
                             value="Amsterdam,Washington,Sydney,Beijing,Cairo,Washington,Sydney,Beijing,Cairo"
                             data-role="tagsinput"> --}}
 
-                        {{!-- <select multiple data-role="tagsinput">
+                    {{!-- <select multiple data-role="tagsinput">
                             <option value="Amsterdam">Amsterdam</option>
                             <option value="Washington">Washington</option>
                             <option value="Sydney">Sydney</option>
@@ -54,42 +60,44 @@
                             <option value="Cairo">Cairo</option>
                             </select> --}}
 
-                        {{!-- UPLOAD TO CLOUDINARY --}}
+                    {{!-- UPLOAD TO CLOUDINARY --}}
 
-                        <div class="form-group col-6">
-                            <label class="label" for="file-1">Choose Image preview...</label>
-                            <input class="form-control" value="{{workEdit.imagePreview}}" name="image" type="file" id="file-1">
-                        </div>
+                    <div class="form-group col-6">
+                        <label class="label" for="file-1">Choose Image preview...</label>
+                        <input class="form-control" value="{{workEdit.imagePreview}}" name="image" type="file"
+                            id="file-1">
+                    </div>
 
-{{!-- <div class='form-group'>
+                    {{!-- <div class='form-group'>
 <input id="inp_files" type="file" multiple="multiple">
 </div> --}}
 
-                         <div class="form-group col-6">
-                            <label class="label" for="file-2">Choose image 2...</label>
-                            <input class="form-control" value='{{workEdit.imgOne}}' name='imgOne' type="text" id="file-2">
-                        </div>
+                    <div class="form-group col-6">
+                        <label class="label" for="file-2">Choose image 2...</label>
+                        <input class="form-control" value='{{workEdit.imgOne}}' name='imgOne' type="text" id="file-2">
+                    </div>
 
 
-                        <div class="form-group col-6">
-                            <label class="label" for="validatedCustomFile">Choose image 3...</label>
-                            <input class="form-control" name='imgTwo' value='{{workEdit.imgTwo}}' type="text" id="file-3">
-                        </div>
+                    <div class="form-group col-6">
+                        <label class="label" for="validatedCustomFile">Choose image 3...</label>
+                        <input class="form-control" name='imgTwo' value='{{workEdit.imgTwo}}' type="text" id="file-3">
+                    </div>
 
 
-                        <div class="form-group col-6">
-                            <label class="label" for="validatedCustomFile">Choose image 4...</label>
-                            <input class="form-control" value='{{workEdit.imgThree}}' name='imgThree' type="text" id="file-4">
-                        </div>
+                    <div class="form-group col-6">
+                        <label class="label" for="validatedCustomFile">Choose image 4...</label>
+                        <input class="form-control" value='{{workEdit.imgThree}}' name='imgThree' type="text"
+                            id="file-4">
+                    </div>
 
-                        <div class="form-group col-12">
-                            <label class="label" for="validatedCustomFile">Link to video...</label>
-                            <input class="form-control" value='{{workEdit.video}}' type="text" id="video">
-                        </div>
+                    <div class="form-group col-12">
+                        <label class="label" for="validatedCustomFile">Link to video...</label>
+                        <input class="form-control" value='{{workEdit.video}}' type="text" id="video">
+                    </div>
 
-                        <div class="form-group col-12">
-                            <button class="btn btn-primary btn-block">Envoyer</button>
-                        </div>
+                    <div class="form-group col-12">
+                        <button class="btn btn-primary btn-block">Envoyer</button>
+                    </div>
                 </form>
             </div>
         </div>

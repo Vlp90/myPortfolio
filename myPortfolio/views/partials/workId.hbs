@@ -2,7 +2,7 @@
 
 
 <h1>{{workId.title}}</h1>
-<h5>{{workId.dateCreation}}</h5>
+<h5>Posted on {{formatDate workId.dateCreation}}</h5>
 
 {{#each workId.tag}}
 <p class="vignette-tag">{{this}}</p>
