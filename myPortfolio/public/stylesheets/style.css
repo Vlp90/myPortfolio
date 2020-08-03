@@ -676,6 +676,7 @@ img {
   .info-container {
     width: 100%;
     margin: 0;
+    height: 100vh;
   }
 
   .content-container {
@@ -687,8 +688,12 @@ img {
   
 .home{
   max-width: 100%;
-  margin: 20px auto;
+  margin: 0;
   padding: 0;
+}
+
+.left-structure {
+  height: calc(100vh - 65px);
 }
 
   .full-container {
