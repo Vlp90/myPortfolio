@@ -670,7 +670,7 @@ img {
 
 @media only screen and (max-width: 1450px) {
   body {
-    /* background-color: red; */
+    width: 100%;
   }
 
   .info-container {
@@ -679,11 +679,20 @@ img {
     height: 100vh;
   }
 
+  .overflow-auto {
+    overflow: hidden;
+  }
+
   .content-container {
-    width: calc(100% - 30px);
-    margin: 15px;
+    width: 100%;
+    margin: 0;
     background-color: white;
-    border-radius: 10px;    
+    border-radius: 10px; 
+    height: 100%;  
+  }
+
+  .margin-container {
+    margin-right: 15px;
   }
   
 .home{
@@ -694,7 +703,9 @@ img {
 
 .left-structure {
   height: calc(100vh - 65px);
+  margin-right: 15px;
 }
+
 
   .full-container {
     margin: 0px;
