@@ -18,6 +18,10 @@
   -webkit-box-orient: vertical;
 }
 
+body {
+  background-color: red !important;
+}
+
 .noMargin {
   margin: 0;
 }
