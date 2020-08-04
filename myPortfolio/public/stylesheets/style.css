@@ -23,7 +23,7 @@
 }
 
 .title-margin {
-margin-bottom: 0.5em;
+margin-bottom: 1em;
 }
 
 .col,
@@ -414,7 +414,7 @@ color: #212b4c;
 }
 
 .search-bar {
-  margin-bottom: 30px;
+  margin-bottom: 20px;
 }
 
 .card-container {
@@ -718,6 +718,7 @@ img {
 @media only screen and (max-width: 1450px) {
   body {
     width: 100%;
+    background-color: white;
   }
 
   .info-container {
