@@ -616,9 +616,9 @@ img {
 .tag {
   display: inline-block;
   padding: 5px 10px;
-  background-color: black;
+  background-color: #007bff;
   border-radius: 10px;
-  margin-bottom: 10px;
+  margin: 10px 0;
 }
 
 .bootstrap-tagsinput {
@@ -627,25 +627,31 @@ img {
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
   display: inline-block;
   padding: 4px 6px;
-  color: #555;
+  color: rgb(163, 157, 157);
   vertical-align: middle;
   border-radius: 4px;
-  max-width: 100%;
+  width: 100%;
   line-height: 22px;
   cursor: text;
-  margin-left: 15px;
-  background-color: red;
+  /* margin-left: 15px; */
+  /* background-color: green; */
 }
 
 .bootstrap-tagsinput input {
   border: none;
   box-shadow: none;
   outline: none;
-  background-color: transparent;
-  padding: 0 6px;
-  margin: 0;
+  background-color: #f3f4f9;
+  padding: 10px 6px;
+  margin-bottom: 5px;
   width: 100%;
   max-width: 100%;
+  /* border-radius: 10px; */
+}
+
+.multiple-input {
+  /* background-color: red; */
+  width: 100%;
 }
 
 .bootstrap-tagsinput.form-control input::-moz-placeholder {
