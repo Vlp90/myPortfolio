@@ -106,12 +106,6 @@ router.get("/workVM/:id", (req, res, next) => {
     });
 });
 
-// ABOUT ME MOBILE
-
-router.get("/aboutVM", (req, res, next) => {
-  res.render("aboutMeMobile");
-});
-
 //ADMIN PART
 
 //SIGN IN
