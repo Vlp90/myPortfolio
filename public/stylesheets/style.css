@@ -7,6 +7,10 @@
     Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
 
+h1, h2, h3, h4, h5, h6, p {
+  color: #212b4c;
+}
+
 .two-line-ellipsis {
   word-break: break-word;
   overflow: hidden;
@@ -18,8 +22,14 @@
   -webkit-box-orient: vertical;
 }
 
-body {
-  background-color: red !important;
+.btn-primary {
+  background-color: #212b4c;
+  border: 1px solid #212b4c;
+}
+
+.btn-outline-primary {
+  color: #212b4c;
+  border-color: #212b4c;
 }
 
 .noMargin {
@@ -287,7 +297,7 @@ color: #212b4c;
 
 .link-container img,
 .stack-container img {
-  border-radius: 20px;
+  border-radius: 10px;
   width: 100%;
   max-height: 75px;
   min-height: 75px;
@@ -376,6 +386,12 @@ color: #212b4c;
   margin: 20px 0;
 }
 
+/* TAGS CONTAINER */
+
+.tag-container {
+margin-top: 20px;
+}
+
 .filter-tag {
   border: 1px solid black;
   padding: 5px 10px;
@@ -386,8 +402,9 @@ color: #212b4c;
   display: inline-block;
   padding: 5px 10px;
   background-color: #eaf0f8;
-  border-radius: 10px;
+  border-radius: 5px;
   color: #8097b3;
+  margin-right: 7px;
 }
 
 .message-search-err {
@@ -395,6 +412,7 @@ color: #212b4c;
   width: 100%;
   margin-top: 10vh;
 }
+
 
 /* SEARCH BAR */
 
