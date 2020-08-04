@@ -21,3 +21,10 @@
 // document.getElementById('inp_img').value += dataURL + '|';
 
 
+function myFunction() {
+    var btn = document.createElement("div");
+    btn.innerHTML = "<div>Vlad</div>";
+
+    let creationEl = document.getElementById('createElement')
+    creationEl.appendChild(btn);
+  }
