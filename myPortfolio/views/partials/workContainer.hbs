@@ -70,6 +70,7 @@
 <div class="container-fluid">
 
     <div class='card-group row card-deck '>
+        
         {{#each allWork}}
 
         <div class="col-sm-12 col-md-6 col-lg-4 col-xl-3  ">
@@ -83,7 +84,7 @@
 
                 <div class="card-body">
                     <h5 class="card-title">{{this.title}}</h5>
-                    <p class="card-text">{{this.description}}</p>
+                    <p class="card-text two-line-ellipsis">{{this.description}}</p>
                     <a href="/work/{{this._id}}" class="card-btn btn btn-primary btn-block toHide">View</a>
                     <a href="/workVM/{{this._id}}" class="card-btn btn btn-primary btn-block toShow">ViewMB</a>
 

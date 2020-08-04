@@ -6,7 +6,7 @@ const Work = require("../models/Work");
 const upload = require("../config/cloudinary");
 
 router.get("/", protectRoute, (req, res, next) => {
-  Work.find()
+  Work.find().sort({dateCreation: -1})
     .then((dbResult) => {
       // console.log(dbResult);
       res.render("dashboard/manage", { allWork: dbResult });
