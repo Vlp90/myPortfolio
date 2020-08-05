@@ -7,6 +7,10 @@
     Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
 
+/* .hidden {
+  display: none;
+} */
+
 h1, h2, h3, h4, h5, h6, p {
   color: #212b4c;
 }

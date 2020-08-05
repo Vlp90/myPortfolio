@@ -25,10 +25,9 @@
 
         <div class="row ">
 
-            <div class="col-sm-12 col-md-6">
+            <div id="iframeDiv" class="col-sm-12 col-md-6">
                 <a class="lightbox" href='{{workId.video}}'>
-                    {{!-- <img src="{{workId.imagePreview}}" alt="Portfolio Image"> --}}
-<iframe   src="{{workId.video}}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe  id='iframeTest' src="{{workId.video}}" aria-hidden="true" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </a>
             </div>
 

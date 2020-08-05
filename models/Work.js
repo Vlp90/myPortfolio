@@ -31,6 +31,10 @@ const workSchema = new Schema({
   tag: [String],
   link: String,
   video: String,
+  // video: {
+  //   type: String,
+  //   default: "noVideo",
+  // },
   imgOne: String,
   imgTwo: String,
   imgThree: String,
