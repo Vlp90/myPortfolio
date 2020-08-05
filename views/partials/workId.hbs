@@ -2,7 +2,7 @@
 
 
 <h1>{{workId.title}}</h1>
-<p>Posted on <strong>{{formatDate workId.dateCreation}}</strong> </p>
+<p>Posted on <strong class='timeAgo'>{{formatDate workId.dateCreation}}</strong> </p>
 
 <div class='tag-container'>
 
@@ -32,7 +32,7 @@
             </div>
 
             <div id="imageDiv1" class="col-sm-12 col-md-6">
-                <a class="lightbox" href="{{workId.imagePreview}}">
+                <a class="lightbox testA" href="{{workId.imagePreview}}">
                     <img id='imageLink1' src="{{workId.imagePreview}}" alt="Portfolio Image">
                 </a>
             </div>
