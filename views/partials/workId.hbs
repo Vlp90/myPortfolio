@@ -20,44 +20,36 @@
 {{!-- IMAGE CONTAINER --}}
 
 
-<div class="container gallery-container">
-
-    <h1>Bootstrap 3 Gallery</h1>
-
-    <p class="page-description text-center">Fluid Layout With Overlay Effect</p>
     
-    <div class="tz-gallery">
+    <div class="tz-gallery ">
 
-        <div class="row">
+        <div class="row ">
 
-            <div class="col-sm-12 col-md-4">
+            <div class="col-sm-12 col-md-6">
+                <a class="lightbox" href='{{workId.video}}'>
+                    {{!-- <img src="{{workId.imagePreview}}" alt="Portfolio Image"> --}}
+<iframe   src="{{workId.video}}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </a>
+            </div>
+
+            <div class="col-sm-12 col-md-6">
                 <a class="lightbox" href="{{workId.imagePreview}}">
-                    <img src="{{workId.imagePreview}}" alt="Bridge">
+                    <img src="{{workId.imagePreview}}" alt="Portfolio Image">
                 </a>
             </div>
-            <div class="col-sm-6 col-md-4">
-                <a class="lightbox" href="../images/park.jpg">
-                    <img src="../images/park.jpg" alt="Park">
+            <div class="col-sm-12 col-md-6">
+                <a class="lightbox" href="{{workId.imgOne}}">
+                    <img src="{{workId.imgOne}}" alt="Portfolio Image">
                 </a>
             </div>
-            <div class="col-sm-6 col-md-4">
-                <a class="lightbox" href="../images/tunnel.jpg">
-                    <img src="../images/tunnel.jpg" alt="Tunnel">
+            <div class="col-sm-12 col-md-6">
+                <a class="lightbox" href="{{workId.imgTwo}}">
+                    <img src="{{workId.imgTwo}}" alt="Portfolio Image">
                 </a>
             </div>
-            <div class="col-sm-12 col-md-8">
-                <a class="lightbox" href="../images/traffic.jpg">
-                    <img src="../images/traffic.jpg" alt="Traffic">
-                </a>
-            </div>
-            <div class="col-sm-6 col-md-4">
-                <a class="lightbox" href="../images/coast.jpg">
-                    <img src="../images/coast.jpg" alt="Coast">
-                </a>
-            </div> 
-            <div class="col-sm-6 col-md-4">
-                <a class="lightbox" href="../images/rails.jpg">
-                    <img src="../images/rails.jpg" alt="Rails">
+            <div class="col-sm-12 col-md-6">
+                <a class="lightbox" href="{{workId.imgThree}}">
+                    <img src="{{workId.imgThree}}" alt="Portfolio Image">
                 </a>
             </div>
 
@@ -65,16 +57,10 @@
 
     </div>
 
-</div>
+
 
 
 {{!-- IMAGE CONTAINER --}}
 
-<iframe width="560" height="315" src="{{workId.video}}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 {{!-- <iframe width="500px" height="250px" src="{{workId.video}}" frameborder="0"
     allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> --}}
-
-<img style="width: 250px;" src="{{workId.imagePreview}}" alt="">
-<img style="width: 250px;" src="{{workId.imgOne}}" alt="">
-<img style="width: 250px;" src="{{workId.imgTwo}}" alt="">
-<img style="width: 250px;" src="{{workId.imgThree}}" alt="">

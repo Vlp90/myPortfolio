@@ -228,6 +228,16 @@ color: #212b4c;
   background-color: white;
 }
 
+.margin-container-VM {
+  margin: 0px;
+  background-color: white;
+}
+
+.padding-container {
+  padding: 30px;
+  background-color: white ;
+}
+
 /* INFO CONTAINER */
 
 .profile-container {
@@ -723,7 +733,10 @@ margin-top: 20px;
 
 /* WORK ID  */
 
-
+iframe {
+  width: 98%;
+  height: 100%;
+}
 .container.gallery-container {
   background-color: #fff;
   color: #35373a;
@@ -731,33 +744,23 @@ margin-top: 20px;
   padding: 30px 50px;
 }
 
-.gallery-container h1 {
-  text-align: center;
-  margin-top: 50px;
-  font-family: 'Droid Sans', sans-serif;
-  font-weight: bold;
-}
-
-.gallery-container p.page-description {
-  text-align: center;
-  margin: 25px auto;
-  font-size: 18px;
-  color: #999;
-}
 
 .tz-gallery {
-  padding: 40px;
+  /* padding: 40px; */
+  margin: 10px 15px;
 }
 
 /* Override bootstrap column paddings */
 .tz-gallery .row > div {
   padding: 2px;
+  margin-bottom: 10px;
 }
 
 .tz-gallery .lightbox img {
-  width: 100%;
+  width: 98%;
   border-radius: 0;
   position: relative;
+  margin-right: 100px;
 }
 
 .tz-gallery .lightbox:before {
@@ -769,8 +772,8 @@ margin-top: 20px;
   opacity: 0;
   color: #fff;
   font-size: 26px;
-  font-family: 'Glyphicons Halflings';
-  content: '\e003';
+  /* font-family: 'Glyphicons Halflings';
+  content: '\e003'; */
   pointer-events: none;
   z-index: 9000;
   transition: 0.4s;
@@ -781,7 +784,7 @@ margin-top: 20px;
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
+  width: 98%;
   height: 100%;
   opacity: 0;
   background-color: rgba(46, 132, 206, 0.7);
@@ -848,6 +851,15 @@ margin-top: 20px;
   
   .margin-container {
     margin-right: 10px;
+  }
+
+  .margin-container-VM {
+    margin: 30px;
+  }
+  
+
+  .padding-container {
+    padding: 0px;
   }
   
 .home{
