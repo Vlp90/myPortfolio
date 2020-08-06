@@ -48,7 +48,12 @@ hbs.registerHelper("formatDate", function (date) {
 
 });
 
+hbs.registerHelper('textFormat', function (text) {
 
+  let string = text; 
+  let testhtml = string.toHtmlObject
+  return testhtml
+})
 
 hbs.registerHelper("formatDateForInput", function (date, compare, options) {
   if (compare === "current") return moment(date).format("YYYY-MM-DDTkk:mm");

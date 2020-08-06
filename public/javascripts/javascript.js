@@ -1,6 +1,3 @@
-
-
-
 // IF VIDEO SRC IS EMPTY
 
 let videoLink = document.getElementById("iframeLink").src;
@@ -45,10 +42,14 @@ if (imageLink4.includes("work")) {
   imageDiv4.style.display = "none";
 }
 
-
 // console.log(imageLink1);
 // console.log(imageLink2);
 // console.log(imageLink3);
 // console.log(imageLink4);
 
+// DESCRIPTION WORK ID
+
+let test = document.getElementById("testText");
+let text = document.getElementById("testText").textContent;
+test.innerHTML = text
 
