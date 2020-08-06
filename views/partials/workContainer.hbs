@@ -11,7 +11,7 @@
         </div>
     </form>
 
-{{!-- FORM VERSION MOBILE --}}
+    {{!-- FORM VERSION MOBILE --}}
     <form action="/workVM" method="GET" class="search-bar toShow">
         <div class="form-group search-align">
             <input type="text" name="search" placeholder="Front end, Javascript, React..."
@@ -70,7 +70,7 @@
 <div class="container-fluid">
 
     <div class='card-group row card-deck '>
-        
+
         {{#each allWork}}
 
         <div class="col-sm-12 col-md-6 col-lg-4 col-xl-3  ">
@@ -86,7 +86,7 @@
                     <h5 class="card-title">{{this.title}}</h5>
                     <p class="card-text two-line-ellipsis">{{this.description}}</p>
                     <a href="/work/{{this._id}}" class="card-btn btn btn-primary btn-block toHide">View</a>
-                    <a href="/workVM/{{this._id}}" class="card-btn btn btn-primary btn-block toShow">ViewMB</a>
+                    <a href="/workVM/{{this._id}}" class="card-btn btn btn-primary btn-block toShow">View</a>
 
                 </div>
             </div>
