@@ -39,9 +39,16 @@ app.use(
 
 
 //HBS HELPERS
+// hbs.registerHelper("formatDate", function (date) {
+//   return moment(date).format("dddd DD MMMM YYYY");
+// });
+
 hbs.registerHelper("formatDate", function (date) {
-  return moment(date).format("dddd DD MMMM YYYY");
+  return moment(date).fromNow() + ".";
+
 });
+
+
 
 hbs.registerHelper("formatDateForInput", function (date, compare, options) {
   if (compare === "current") return moment(date).format("YYYY-MM-DDTkk:mm");
