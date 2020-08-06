@@ -794,7 +794,7 @@ iframe {
   margin-bottom: 10px;
 }
 
-.tz-gallery .lightbox img, .tz-gallery .lightbox iframe {
+.tz-gallery .lightbox img, .tz-gallery #iframeLink {
   width: 98%;
   border-radius: 0;
   position: relative;
@@ -806,6 +806,8 @@ iframe {
   height: 500px;
   border-radius: 5px;
 }
+
+
 
 .tz-gallery .lightbox:before {
   position: absolute;
