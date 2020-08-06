@@ -91,7 +91,7 @@ router.get("/workVM/", function (req, res) {
           noMatch: noMatch,
         });
       }
-    });
+    }).sort({dateCreation: -1});
   }
 });
 
