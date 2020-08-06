@@ -49,7 +49,9 @@ if (imageLink4.includes("work")) {
 
 // DESCRIPTION WORK ID
 
-let test = document.getElementById("testText");
-let text = document.getElementById("testText").textContent;
+let test = document.getElementById("textArea");
+let text = document.getElementById("textArea").textContent;
 test.innerHTML = text
+
+
 

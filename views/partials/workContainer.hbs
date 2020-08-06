@@ -84,9 +84,10 @@
 
                 <div class="card-body">
                     <h5 class="card-title">{{this.title}}</h5>
-                    <p class="card-text two-line-ellipsis">{{this.description}}</p>
+                    <p class="card-text two-line-ellipsis">{{textFormat this.description}}</p>
                     <a href="/work/{{this._id}}" class="card-btn btn btn-primary btn-block toHide">View</a>
                     <a href="/workVM/{{this._id}}" class="card-btn btn btn-primary btn-block toShow">View</a>
+<p><span class='timeAgo'>{{formatDate this.dateCreation}}</span> </p>
 
                 </div>
             </div>

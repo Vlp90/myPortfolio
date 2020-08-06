@@ -44,16 +44,26 @@ app.use(
 // });
 
 hbs.registerHelper("formatDate", function (date) {
-  return moment(date).fromNow() + ".";
-
+  return moment(date).fromNow();
 });
 
-hbs.registerHelper('textFormat', function (text) {
 
-  let string = text; 
-  let testhtml = string.toHtmlObject
-  return testhtml
-})
+
+
+hbs.registerHelper("textFormat", function (str) {
+  if ((str===null) || (str===''))
+  return false;
+  else
+  str = str.toString();
+  return str.replace(/<(?:.|\n)*?>/gm, '');
+});
+
+// hbs.registerHelper('textFormat', function (text) {
+
+//   let string = text; 
+//   let testhtml = string.toHtmlObject
+//   return testhtml
+// })
 
 hbs.registerHelper("formatDateForInput", function (date, compare, options) {
   if (compare === "current") return moment(date).format("YYYY-MM-DDTkk:mm");
@@ -69,7 +79,7 @@ app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 
 // default value for title local
-app.locals.title = 'My sublime Portfolio';
+app.locals.title = 'Welcome';
 
 // uncomment after placing your favicon in /public
 //app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
