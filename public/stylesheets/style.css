@@ -237,7 +237,7 @@ a:hover {
 }
 
 .margin-container {
-  margin: 30px;
+  margin: 30px 30px 0 30px;
   background-color: white;
 }
 
@@ -358,7 +358,7 @@ a:hover {
   align-items: center;
   justify-content: space-between;
   border-radius: 10px;
-  margin-top: 0.5em;
+  /* margin-top: 0.5em; */
 }
 
 .contact-me-left {
