@@ -892,7 +892,6 @@ iframe {
 
   .content-container-VM {
     width: 100%;
-    margin: 0;
     background-color: white !important;
     border-radius: 10px;
     height: 100%;
@@ -904,7 +903,7 @@ iframe {
   }
 
   .margin-container-VM {
-    margin: 30px;
+    margin: 30px 15px 30px 30px;
   }
 
 
