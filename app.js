@@ -79,7 +79,7 @@ app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 
 // default value for title local
-app.locals.title = 'Welcome';
+app.locals.title = 'Welcome into my world';
 
 // uncomment after placing your favicon in /public
 //app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));

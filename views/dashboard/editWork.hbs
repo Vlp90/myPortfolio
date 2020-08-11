@@ -47,8 +47,12 @@
                         <div class='multiple-input'>
 
                             <select multiple class='form-control' placeholder="Enter tag + tab to validate" name="tag" data-role="tagsinput">
-                               {{#each workEdit.tag}}
+                               {{!-- {{#each workEdit.tag}}
                                 <option value="{{this}}">{{this}}</option>
+                                {{/each}} --}}
+
+                                 {{#each workEdit.tag}}
+                                <option value="{{this}}"></option>
                                 {{/each}}
                             </select>
                         </div>
