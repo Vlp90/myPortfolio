@@ -1,6 +1,8 @@
 {{!-- <a href="/" class="card-btn btn btn-outline-primary">Return</a> --}}
 
 
+
+
 <h1>{{workId.title}}</h1>
 <p>Posted <strong class='timeAgo'>{{formatDate workId.dateCreation}}</strong> </p>
 
@@ -15,6 +17,8 @@
 <p id='textArea'>{{workId.description}}</p>
 {{!-- <div id='testText'></div> --}}
 
+<p><a target="_blank" href="{{workId.link}}">{{workId.link}}</a></p>
+
 
 <h3>Screenshots</h3>
 
@@ -28,11 +32,11 @@
 
             <div id="iframeDiv" class="col-sm-12 col-md-12">
                 <a class="" href='{{workId.video}}'>
-<iframe  id='iframeLink' src="{{workId.video}}" aria-hidden="true" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <iframe  id='iframeLink' src="{{workId.video}}" aria-hidden="true" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </a>
             </div>
 
-            <div id="imageDiv1" class="col-sm-12 col-md-6">
+            <div id="imageDiv1" class="col-sm-12 col-md-6 ">
                 {{!-- <a class="lightbox" href="{{workId.imagePreview}}"> --}}
                                   <a class="lightbox" href="{{workId.imgZero}}">
                     {{!-- <img id='imageLink1' src="{{workId.imagePreview}}" alt="Portfolio Image"> --}}
