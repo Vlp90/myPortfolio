@@ -35,6 +35,7 @@ const workSchema = new Schema({
   //   type: String,
   //   default: "noVideo",
   // },
+  imgZero: String,
   imgOne: String,
   imgTwo: String,
   imgThree: String,
