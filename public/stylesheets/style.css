@@ -925,7 +925,7 @@ iframe {
   }
 
   .left-structure {
-    height: calc(100vh - 150px);
+    height: calc(100vh - 140px);
     margin-right: 15px;
   }
 
