@@ -875,9 +875,9 @@ iframe {
     background-color: white;
   }
 
-  .contact-me {
+  /* .contact-me {
     margin-bottom: 20px;
-  }
+  } */
 
   .info-container {
     width: 100%;
@@ -925,7 +925,8 @@ iframe {
   }
 
   .left-structure {
-    height: calc(100vh - 65px);
+    /* height: calc(100vh - 65px); */
+    height: 95vh;
     margin-right: 15px;
   }
 
