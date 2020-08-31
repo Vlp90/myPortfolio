@@ -312,7 +312,8 @@ a:hover {
   /* max-height: 10px; */
 }
 
-.link-container p, .stacks-container p {
+.link-container p,
+.stacks-container p {
   display: none;
 }
 
@@ -795,10 +796,11 @@ iframe {
 .tz-gallery .row>div {
   padding: 2px;
   margin-bottom: 10px;
-  
+
 }
 
-.tz-gallery .lightbox img, .tz-gallery #iframeLink {
+.tz-gallery .lightbox img,
+.tz-gallery #iframeLink {
   width: 98%;
   border-radius: 0;
   position: relative;
@@ -953,8 +955,14 @@ iframe {
     width: 100%;
   }
 
-  
-  .tz-gallery .lightbox img, .tz-gallery #iframeLink {
+  .margin-container-fixed {
+    margin: 30px 30px 30px 30px;
+
+  }
+
+
+  .tz-gallery .lightbox img,
+  .tz-gallery #iframeLink {
     width: 100%;
 
   }
