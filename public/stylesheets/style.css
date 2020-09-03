@@ -850,7 +850,7 @@ iframe {
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
+  width: 98%;
   height: 100%;
   opacity: 0;
   background-color: rgba(0, 0, 0, 0.198);
@@ -975,6 +975,10 @@ iframe {
 @media only screen and (max-width: 767px) {
 
   #textArea {
+    width: 100%;
+  }
+
+  .tz-gallery .lightbox:after {
     width: 100%;
   }
 
