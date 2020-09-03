@@ -249,7 +249,7 @@ a:hover {
 .margin-container-VM {
   margin: 0px;
   background-color: white;
-  height: 100vh;
+  /* height: 100vh; */
 }
 
 .padding-container {
@@ -330,13 +330,20 @@ a:hover {
   /* background-color: red; */
 }
 
-.link-container img,
-.stack-container img {
+.link-container img {
   border-radius: 10px;
   width: 100%;
   max-height: 75px;
   min-height: 75px;
   object-fit: cover;
+}
+
+.stack-container img {
+  border-radius: 10px;
+  width: 100%;
+  max-height: 75px;
+  min-height: 75px;
+  object-fit: contain;
 }
 
 .link-container p,
@@ -366,7 +373,7 @@ a:hover {
   align-items: center;
   justify-content: space-between;
   border-radius: 10px;
-  margin-bottom : 2.5em;
+  margin-bottom: 2.5em;
 }
 
 .contact-me-left {
@@ -843,7 +850,7 @@ iframe {
   position: absolute;
   top: 0;
   left: 0;
-  width: 98%;
+  width: 100%;
   height: 100%;
   opacity: 0;
   background-color: rgba(0, 0, 0, 0.198);
