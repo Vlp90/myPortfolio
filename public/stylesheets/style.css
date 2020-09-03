@@ -21,6 +21,11 @@ p {
   color: #212b4c;
 }
 
+
+*::-webkit-scrollbar {
+  display: none;
+}
+
 .two-line-ellipsis {
   word-break: break-word;
   overflow: hidden;
@@ -237,13 +242,14 @@ a:hover {
 }
 
 .margin-container {
-  margin: 30px 15px 0 30px;
+  margin: 30px 30px 0 30px;
   background-color: white;
 }
 
 .margin-container-VM {
   margin: 0px;
   background-color: white;
+  height: 100vh;
 }
 
 .padding-container {
@@ -360,7 +366,7 @@ a:hover {
   align-items: center;
   justify-content: space-between;
   border-radius: 10px;
-  /* margin-top: 0.5em; */
+  margin-bottom : 2.5em;
 }
 
 .contact-me-left {
@@ -474,6 +480,7 @@ a:hover {
 
 .search-bar {
   margin-bottom: 20px;
+  margin-right: -15px;
 }
 
 .card-container {
@@ -914,6 +921,15 @@ iframe {
 
   .margin-container-VM {
     margin: 30px 15px 30px 30px;
+  }
+
+  .margin-container {
+    margin: 30px 15px 30px 30px;
+  }
+
+  .search-bar {
+
+    margin-right: 0
   }
 
 
