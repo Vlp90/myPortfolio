@@ -153,7 +153,8 @@ a:hover {
 }
 
 .home {
-  max-width: 90%;
+  /* max-width: 90%; */
+  max-width: 1920px;
   height: calc(100vh - 40px);
   margin: 20px auto;
 }
