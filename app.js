@@ -17,9 +17,9 @@ const moment = require("moment");
 
 
 // Server Started
-// const listener = app.listen(process.env.PORT, () => {
-//   console.log(`app started at ${process.env.SITE_URL}:${process.env.PORT}`);
-// });
+const listener = app.listen(process.env.PORT, () => {
+  console.log(`app started at ${process.env.SITE_URL}:${process.env.PORT}`);
+});
 
 // mongoose.connect('mongodb://localhost/myportfolio');
 
@@ -69,6 +69,7 @@ hbs.registerHelper("formatDateForInput", function (date, compare, options) {
   if (compare === "current") return moment(date).format("YYYY-MM-DDTkk:mm");
   if (compare === "min") return moment().format("YYYY-MM-DDTkk:mm");
 });
+
 
 // initial config
 app.set("view engine", "hbs");

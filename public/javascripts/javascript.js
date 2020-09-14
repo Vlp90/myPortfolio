@@ -49,9 +49,19 @@ if (imageLink4.includes("work")) {
 
 // DESCRIPTION WORK ID
 
-let test = document.getElementById("textArea");
+let test2 = document.getElementById("textArea");
 let text = document.getElementById("textArea").textContent;
-test.innerHTML = text
+test2.innerHTML = text
+
+// SORT TAG WORK ID
+
+
+let test = document.getElementById("textArea");
+const sortData = (data) => {
+  // const sortedData = [...data];
+
+  return data.sort((a, b) => (a.cases > b.cases ? -1 : 1));
+};
 
 
 

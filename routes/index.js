@@ -41,19 +41,41 @@ router.get("/", function (req, res) {
       if (err) {
         console.log(err);
       } else {
-        
         res.render("index", { allWork: allCampgrounds, noMatch: noMatch });
       }
-    }).sort({dateCreation: -1});
+    }).sort({ dateCreation: -1 });
   }
 });
 
 // GET ID
+// router.get("/work/:id", (req, res, next) => {
+//   Work.findById(req.params.id)
+//     .then((workId) => {
+//       res.render("workDetails", { workId });
+//       console.log("workID", workId.tag);
+
+//     })
+//     .catch((err) => {
+//       console.log(err);
+//     });
+// });
+
 router.get("/work/:id", (req, res, next) => {
   Work.findById(req.params.id)
     .then((workId) => {
-      // console.log(dbRes);
-      res.render("workDetails", { workId });
+
+      const sortedTag = (data) => {
+        return data.sort((a, b) => a - b);
+      };
+
+    const tagsSorted =  workId.tag.sort();
+
+
+    // sortedTag(dataTest)
+
+      res.render("workDetails", { workId, tagsSorted });
+
+      console.log(dataTest)
     })
     .catch((err) => {
       console.log(err);
@@ -91,7 +113,7 @@ router.get("/workVM/", function (req, res) {
           noMatch: noMatch,
         });
       }
-    }).sort({dateCreation: -1});
+    }).sort({ dateCreation: -1 });
   }
 });
 
