@@ -9,7 +9,14 @@ router.get("/", protectRoute, (req, res, next) => {
   Work.find().sort({dateCreation: -1})
     .then((dbResult) => {
       // console.log(dbResult);
-      res.render("dashboard/manage", { allWork: dbResult });
+      
+    const tagsSorted =  dbResult.map((res) => {
+      return res.tag.sort()
+      // console.log(res.tag.sort())
+    })
+
+      res.render("dashboard/manage", { allWork: dbResult});
+      // console.log(tagsSorted)
     })
     .catch((err) => {
       console.log(err);
