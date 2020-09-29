@@ -303,8 +303,9 @@ a:hover {
 .link-container img:hover {
   /* width: 50%; */
   box-shadow: 0 2px 14px rgba(126, 87, 88, 0.1), 0 3px 6px rgba(0, 0, 0, 0.08);
-  filter: brightness(80%);
-  transition: 0.4s;
+  /* filter: brightness(80%); */
+  /* transition: 0.4s; */
+  transform: scale(1.08);
 }
 
 /* .stacks-container img:hover  {
@@ -386,7 +387,7 @@ a:hover {
 .contact-me:hover {
   background-color: #0167d4;
   transition: 0.4s;
-
+  transform: scale(1.08);
 }
 
 /* .contact-emoji:hover {
