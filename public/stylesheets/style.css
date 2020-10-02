@@ -777,6 +777,13 @@ a:hover {
 
 /* WORK ID  */
 
+#iframeDiv {
+  height: 500px;
+  width: 100%;
+}
+
+
+
 .timeAgo {
   color: #8097b3;
 }

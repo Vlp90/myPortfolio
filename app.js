@@ -17,9 +17,9 @@ const moment = require("moment");
 
 
 // Server Started
-// const listener = app.listen(process.env.PORT, () => {
-//   console.log(`app started at ${process.env.SITE_URL}:${process.env.PORT}`);
-// });
+const listener = app.listen(process.env.PORT, () => {
+  console.log(`app started at ${process.env.SITE_URL}:${process.env.PORT}`);
+});
 
 // mongoose.connect('mongodb://localhost/myportfolio');
 
