@@ -220,7 +220,7 @@ a:hover {
 }
 
 .info-container {
-  width: calc(30% - 40px);
+  width: calc(25% - 40px);
   height: calc(100vh - 80px);
   margin: 20px;
   background-color: white;
@@ -228,7 +228,7 @@ a:hover {
 }
 
 .content-container {
-  width: calc(70% - 40px);
+  width: calc(75% - 40px);
   margin: 20px;
   background-color: white;
   border-radius: 10px;
